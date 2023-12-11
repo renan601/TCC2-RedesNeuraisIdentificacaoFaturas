@@ -38,7 +38,7 @@ class LabelEncoder:
 
 	
     def _match_anchor_boxes(
-        self, anchor_boxes, gt_boxes, match_iou=0.4, ignore_iou=0.2
+        self, anchor_boxes, gt_boxes, match_iou=0.4, ignore_iou=0.25
     ):
         """Matches ground truth boxes to anchor boxes based on IOU.
 

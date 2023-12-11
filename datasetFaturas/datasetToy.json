@@ -1,0 +1,63 @@
+{
+    "trainInvoices": {
+        "datasetFaturas/ModeloXTrain/1.png": {
+            "0": [
+                0.20164,
+                0.28309,
+                0.37476,
+                0.46769
+            ],
+            "1": [
+                0.20164,
+                0.28309,
+                0.37476,
+                0.46769
+            ]
+        }
+    },
+    "valInvoices": {
+        "datasetFaturas/ModeloXValidation/1.png": {
+            "0": [
+                0.20164,
+                0.28309,
+                0.37476,
+                0.46769
+            ],
+            "1": [
+                0.20164,
+                0.28309,
+                0.37476,
+                0.46769
+            ]
+        }
+    },
+
+    "datasetInfo": {
+        "trainImgs": 1,
+        "valImgs": 1,
+        "imgSize": [640, 640, 3],
+        "imgFormat": "png",
+        "bboxFormat": [
+            "relXmin",
+            "relYmin",
+            "relXmax",
+            "relYmax"
+        ]
+    },
+
+    "labelNames": {
+        "0": "Endereço",
+        "1": "Instalação",
+        "2": "Faturamento",
+        "3": "Impostos",
+        "4": "Leitura"
+    },
+    
+    "labelCount": {
+        "0": 1,
+        "1": 1,
+        "2": 0,
+        "3": 0,
+        "4": 0
+    }
+}

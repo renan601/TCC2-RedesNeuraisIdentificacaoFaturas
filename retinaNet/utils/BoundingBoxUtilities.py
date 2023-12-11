@@ -1,6 +1,7 @@
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
+from PIL import Image
 
 """
 ## Implementing utility functions
@@ -100,9 +101,11 @@ def compute_iou(boxes1, boxes2):
     return tf.clip_by_value(intersection_area / union_area, 0.0, 1.0)
 
 
+"""
+## Use matplotlib to draw a rectangle identifying bbox in a image
+"""
 def visualize_detections(
-    image, boxes, classes, scores, figsize=(7, 7), linewidth=1, color=[0, 0, 1]
-):
+    image, boxes, classes, scores, figsize=(7, 7), linewidth=1, color=[0, 0, 1]):
     """Visualize Detections"""
     image = np.array(image, dtype=np.uint8)
     plt.figure(figsize=figsize)
@@ -127,3 +130,13 @@ def visualize_detections(
         )
     plt.show()
     return ax
+
+"""
+## Padding the smaller side of a image with fixed color to make equal height and width
+"""
+def make_square(im, min_size, fill_color=(0, 0, 0, 0)):
+    x, y = im.size
+    size = max(min_size, x, y)
+    new_im = Image.new('RGB', (size, size), fill_color)
+    new_im.paste(im, (int((size - x) / 2), int((size - y) / 2)))
+    return new_im, size - x, size - y

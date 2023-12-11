@@ -25,11 +25,11 @@ class DecodePredictions(tf.keras.layers.Layer):
 
     def __init__(
         self,
-        num_classes=4,
+        num_classes=5,
         confidence_threshold=0.05,
         nms_iou_threshold=0.5,
         max_detections_per_class=100,
-        max_detections=400,
+        max_detections=500,
         box_variance=[0.1, 0.1, 0.2, 0.2],
         **kwargs
     ):
