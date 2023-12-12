@@ -26,7 +26,7 @@ batch_size = 16
 ## Initializing and compiling model
 """
 
-resnet50_backbone = ResNet50Reduced(include_top=False, weights=None, input_shape=[640, 640, 3])
+resnet50_backbone = ResNet50Reduced(input_shape=[640, 640, 3])
 loss_fn = RetinaNetLoss(num_classes)
 model = RetinaNet(num_classes, resnet50_backbone)
 

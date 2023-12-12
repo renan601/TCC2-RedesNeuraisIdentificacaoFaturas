@@ -29,7 +29,7 @@ model_dir = "retinaNet/weightsTrainingTeste/"
 label_encoder = LabelEncoder()
 
 num_classes = 5
-batch_size = 16
+batch_size = 12
 
 
 load_dotenv()
